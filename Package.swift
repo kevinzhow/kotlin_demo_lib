@@ -20,7 +20,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "kotlin_demo_lib",
-            dependencies: []),
+            dependencies: ["kotlin_lib"]),
+        .binaryTarget(
+                    name: "kotlin_lib",
+                    path: "Sources/library.xcframework"),
         .testTarget(
             name: "kotlin_demo_libTests",
             dependencies: ["kotlin_demo_lib"]),
