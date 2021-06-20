@@ -13,29 +13,29 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic ignored "-Wnullability"
 
 __attribute__((swift_name("KotlinBase")))
-@interface LibraryBase : NSObject
+@interface Happy_libBase : NSObject
 - (instancetype)init __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 + (void)initialize __attribute__((objc_requires_super));
 @end;
 
-@interface LibraryBase (LibraryBaseCopying) <NSCopying>
+@interface Happy_libBase (Happy_libBaseCopying) <NSCopying>
 @end;
 
 __attribute__((swift_name("KotlinMutableSet")))
-@interface LibraryMutableSet<ObjectType> : NSMutableSet<ObjectType>
+@interface Happy_libMutableSet<ObjectType> : NSMutableSet<ObjectType>
 @end;
 
 __attribute__((swift_name("KotlinMutableDictionary")))
-@interface LibraryMutableDictionary<KeyType, ObjectType> : NSMutableDictionary<KeyType, ObjectType>
+@interface Happy_libMutableDictionary<KeyType, ObjectType> : NSMutableDictionary<KeyType, ObjectType>
 @end;
 
-@interface NSError (NSErrorLibraryKotlinException)
+@interface NSError (NSErrorHappy_libKotlinException)
 @property (readonly) id _Nullable kotlinException;
 @end;
 
 __attribute__((swift_name("KotlinNumber")))
-@interface LibraryNumber : NSNumber
+@interface Happy_libNumber : NSNumber
 - (instancetype)initWithChar:(char)value __attribute__((unavailable));
 - (instancetype)initWithUnsignedChar:(unsigned char)value __attribute__((unavailable));
 - (instancetype)initWithShort:(short)value __attribute__((unavailable));
@@ -69,74 +69,74 @@ __attribute__((swift_name("KotlinNumber")))
 @end;
 
 __attribute__((swift_name("KotlinByte")))
-@interface LibraryByte : LibraryNumber
+@interface Happy_libByte : Happy_libNumber
 - (instancetype)initWithChar:(char)value;
 + (instancetype)numberWithChar:(char)value;
 @end;
 
 __attribute__((swift_name("KotlinUByte")))
-@interface LibraryUByte : LibraryNumber
+@interface Happy_libUByte : Happy_libNumber
 - (instancetype)initWithUnsignedChar:(unsigned char)value;
 + (instancetype)numberWithUnsignedChar:(unsigned char)value;
 @end;
 
 __attribute__((swift_name("KotlinShort")))
-@interface LibraryShort : LibraryNumber
+@interface Happy_libShort : Happy_libNumber
 - (instancetype)initWithShort:(short)value;
 + (instancetype)numberWithShort:(short)value;
 @end;
 
 __attribute__((swift_name("KotlinUShort")))
-@interface LibraryUShort : LibraryNumber
+@interface Happy_libUShort : Happy_libNumber
 - (instancetype)initWithUnsignedShort:(unsigned short)value;
 + (instancetype)numberWithUnsignedShort:(unsigned short)value;
 @end;
 
 __attribute__((swift_name("KotlinInt")))
-@interface LibraryInt : LibraryNumber
+@interface Happy_libInt : Happy_libNumber
 - (instancetype)initWithInt:(int)value;
 + (instancetype)numberWithInt:(int)value;
 @end;
 
 __attribute__((swift_name("KotlinUInt")))
-@interface LibraryUInt : LibraryNumber
+@interface Happy_libUInt : Happy_libNumber
 - (instancetype)initWithUnsignedInt:(unsigned int)value;
 + (instancetype)numberWithUnsignedInt:(unsigned int)value;
 @end;
 
 __attribute__((swift_name("KotlinLong")))
-@interface LibraryLong : LibraryNumber
+@interface Happy_libLong : Happy_libNumber
 - (instancetype)initWithLongLong:(long long)value;
 + (instancetype)numberWithLongLong:(long long)value;
 @end;
 
 __attribute__((swift_name("KotlinULong")))
-@interface LibraryULong : LibraryNumber
+@interface Happy_libULong : Happy_libNumber
 - (instancetype)initWithUnsignedLongLong:(unsigned long long)value;
 + (instancetype)numberWithUnsignedLongLong:(unsigned long long)value;
 @end;
 
 __attribute__((swift_name("KotlinFloat")))
-@interface LibraryFloat : LibraryNumber
+@interface Happy_libFloat : Happy_libNumber
 - (instancetype)initWithFloat:(float)value;
 + (instancetype)numberWithFloat:(float)value;
 @end;
 
 __attribute__((swift_name("KotlinDouble")))
-@interface LibraryDouble : LibraryNumber
+@interface Happy_libDouble : Happy_libNumber
 - (instancetype)initWithDouble:(double)value;
 + (instancetype)numberWithDouble:(double)value;
 @end;
 
 __attribute__((swift_name("KotlinBoolean")))
-@interface LibraryBoolean : LibraryNumber
+@interface Happy_libBoolean : Happy_libNumber
 - (instancetype)initWithBool:(BOOL)value;
 + (instancetype)numberWithBool:(BOOL)value;
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Greeting")))
-@interface LibraryGreeting : LibraryBase
+@interface Happy_libGreeting : Happy_libBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (NSString *)greeting __attribute__((swift_name("greeting()")));
@@ -144,7 +144,7 @@ __attribute__((swift_name("Greeting")))
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Platform")))
-@interface LibraryPlatform : LibraryBase
+@interface Happy_libPlatform : Happy_libBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (readonly) NSString *platform __attribute__((swift_name("platform")));
