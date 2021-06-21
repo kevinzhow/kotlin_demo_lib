@@ -1,0 +1,6 @@
+framework module HappyNasa {
+    umbrella header "HappyNasa.h"
+
+    export *
+    module * { export * }
+}

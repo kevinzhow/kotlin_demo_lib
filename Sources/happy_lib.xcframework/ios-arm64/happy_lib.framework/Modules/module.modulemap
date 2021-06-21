@@ -1,6 +1,0 @@
-framework module happy_lib {
-    umbrella header "happy_lib.h"
-
-    export *
-    module * { export * }
-}
