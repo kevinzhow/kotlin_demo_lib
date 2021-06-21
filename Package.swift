@@ -6,23 +6,16 @@ import PackageDescription
 let package = Package(
     name: "kotlin_demo_lib",
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "kotlin_demo_lib",
-            targets: ["kotlin_demo_lib", "happy_lib"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+            targets: ["kotlin_demo_lib", "HappyNasa"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "kotlin_demo_lib",
             dependencies: []),
         .binaryTarget(
-                    name: "happy_lib",
+                    name: "HappyNasa",
                     path: "Sources/happy_lib.xcframework"),
         .testTarget(
             name: "kotlin_demo_libTests",
